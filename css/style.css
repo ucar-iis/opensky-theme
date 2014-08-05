@@ -68,11 +68,15 @@ Navbar
 	margin-bottom: 0;
 }
 
+.navbar-nav li {
+	padding-left: 10px;
+}
+
 /* Adjust navbar container size */
 .navbar.container {
 	margin-top: 0; /* Set navbar top margin to zero for xs screens */
 	max-width: 100%;
-	padding-left: 10px;
+	padding-left: 0;
 }
 
 .navbar.container > .container {
@@ -114,6 +118,7 @@ Navbar
 
 .container > .navbar-header {
 	margin-left: 0; /* override default Bootstrap negative left margin */
+	width: 100%; /* Allow navbar-header to fill width of the screen */
 }
 
 /* Remove default padding on navbar-collapse */
@@ -142,6 +147,11 @@ Navbar
 	border-right: 2px solid #163B69;
 }
 
+.navbar-default .navbar-nav > li > a {
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
 	color: #F8981D;
 }
@@ -152,7 +162,13 @@ Navbar
 
 /* Change navabr active link style */
 .navbar-default .navbar-nav>.active>a {
-	background-color: #025081;
+	background-color: #0075BF;
+	/* color: #F8981D;*/ /* organge color */
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: #0075BF;
 	color: #F8981D;
 }
 
@@ -222,6 +238,7 @@ Containers
 
 .highlighted.jumbotron .block-title {
 	color: #163B69; /* Highlighted Region Block Title color */
+	margin-top: 30px;
 }
 
 /* Force all divs contained within jumbortron, e.g. highlighted section, not to exceed 980 width */
@@ -245,11 +262,13 @@ Containers
 .content {
 	padding-bottom: 40px;
 	min-height: 268px;
+	padding: 0 30px 0 30px;
 }
 
-.content {
-	padding-left: 20px;
+.front .content {
+	/*padding-left: 20px;*/
 	padding-right: 20px;
+	padding-left: 0;
 }
 
 /* Remove default negative left and right padding on rows */
@@ -310,6 +329,38 @@ Home page specific
 /* Hack to remove space between Home page sections */
 .front #node-18 {
 	display: none;
+}
+
+/* Featured Publication Block  */
+#block-block-4 {
+        background: #EEECE1; /* weird light brownish color */
+        max-width: 100%;
+	float: none;
+}
+
+/* Featured Publication Heading */
+#block-block-4 h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #163B69;
+}
+
+/* Front Page Main Block */
+#block-system-main {
+	float: none;
+}
+
+.front .region-content {
+	padding-left: 0;
+}
+
+.front .region-content section {
+	padding-left: 30px;
+	padding-right: 20px;
+}
+
+.front .content {
+	padding-top: 20px;
 }
 
 /**************
@@ -405,11 +456,19 @@ Media queries for responsive elements
 		width: 100%; /* Set navbar-nav width */
 	}
 
+	.navbar-nav li {
+        	padding-left: 0;
+	}
+
+	.navbar-nav li.first {
+		padding-left: 10px;
+	}
+
 /* Set container size for 768px and up */
 	.navbar.container {
 		width: 100%;
 		margin-top: 0;
-		height: 137px;
+		height: 127px; /* set height for navbar-container */
 		padding-right: 0;
 	}
 	
@@ -424,11 +483,13 @@ Media queries for responsive elements
 	.navbar.container > .container {
 		max-width: 100%;
 		width: 100%;
+		margin: auto;
 	}
 
 /* Positioning etc for lead tagline in main navbar for 768 and up */
 	.navbar.container > .container .lead {
-		margin-top: 20px;
+		margin-top: 40px;
+		margin-right: 30px;
 		color: #ffffff;
         	width: 300px;
 		float: right;
@@ -436,12 +497,14 @@ Media queries for responsive elements
 
 /* Set properties for navbar-header 768 and up */
 	.navbar-header {
-		position: relative;
-		top: 0;
+		max-width: 980px;
+		padding-top: 0;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.navbar-nav>li>a {
-        	margin-top: 6px; 
+        	margin-top: 0; 
 	}
 
 /* Containers 768 up */
@@ -475,6 +538,7 @@ Media queries for responsive elements
 	    	margin-right: auto;
 		padding-left: 0;
 		padding-right: 0;
+		padding-top: 0;
 	}
 
 /* Main content 768 up */
@@ -483,19 +547,29 @@ Media queries for responsive elements
 		padding: 20px 30px;
 	}	
 
+/* Override Front Region Content Section padding for 768 and up */
+	.front .region-content section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/* Featured Publication Block  */
 	#block-block-4 {
 		max-width: 30%;
 		float: left;
-		background: #CCCCCC;
+		background: #EEECE1; /* weird light brownish color */
 		margin-right: 2%;
 		padding: 15px;
 	}
 
+/* Featured Publication Heading */
 	#block-block-4 h2 {
 		font-size: 20px;
 		margin-top: 0;
-		color: #201808;
+		color: #163B69;
 	}
+
+/* Front Page Main Block */
 
 	#block-system-main {
 		max-width: 65%;
@@ -516,6 +590,13 @@ Media queries for responsive elements
 		margin-right: auto;
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.page-header {
+		margin-left: 30px;
+	}
+
+	.container > .navbar-header {
 	}
 
 }
