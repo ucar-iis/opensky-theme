@@ -70,7 +70,7 @@ Navbar
 
 /* Adjust navbar container size */
 .navbar.container {
-	margin-top: 3px; /* Set navbar top margin to zero for xs screens */
+	margin-top: 0; /* Set navbar top margin to zero for xs screens */
 	max-width: 100%;
 	padding-left: 10px;
 }
@@ -85,7 +85,7 @@ Navbar
 
 /* Set navbar background-color  */
 .navbar-default {
-	background-color: #003366;
+	background-color: #163B69;
 	border: none;
 }
 
@@ -138,13 +138,22 @@ Navbar
 	margin-top: 0;
 }
 
+.navbar-default .navbar-nav > li {
+	border-right: 2px solid #163B69;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #F8981D;
+}
+
 .navbar-default .iis-nav .navbar-nav>li>a {
 	color: #FFFFFF;
 }
 
 /* Change navabr active link style */
 .navbar-default .navbar-nav>.active>a {
-	background-color: #428BCA;
+	background-color: #025081;
+	color: #F8981D;
 }
 
 /*******************************
@@ -177,6 +186,16 @@ Tweaks to UCAR orgNav
 
 div#peopleOrg {
 	display: none;
+}
+
+/* Changes to orgNav link colors etc for OpenSky */
+
+#orgNavV1 div ul li a {
+	color: #FFFFFF!important;
+}
+
+#orgNavV1 {
+	border-bottom: 1px solid #F8981D!important;
 }
 
 /*****************
@@ -369,7 +388,7 @@ Media queries for responsive elements
 /* Page Header 768 up */
 
 /* Show and adjust display of lead text for 768px and up */
-	#page-header .lead {
+	#page-header .lead, .navbar.container .lead {
 		display: block;
 		color: #fff;
 	}
@@ -381,11 +400,17 @@ Media queries for responsive elements
 		border-radius: 0;
 	}
 
+	.navbar-nav {
+		background: #025081; /* Set navbar-nav bg color */
+		width: 100%; /* Set navbar-nav width */
+	}
+
 /* Set container size for 768px and up */
 	.navbar.container {
 		width: 100%;
-		margin-top: 40px;
-		height: 101px;
+		margin-top: 0;
+		height: 137px;
+		padding-right: 0;
 	}
 	
 /* Set navbar-brand font-size for 768px and up */
@@ -394,18 +419,25 @@ Media queries for responsive elements
 		padding-top: 25px;
 	}
 
+/* Set navbar container width for 768 and up */
+
+	.navbar.container > .container {
+		max-width: 100%;
+		width: 100%;
+	}
+
 /* Positioning etc for lead tagline in main navbar for 768 and up */
 	.navbar.container > .container .lead {
-		margin-top: -20px;
+		margin-top: 20px;
 		color: #ffffff;
         	width: 300px;
-        	float: right;
+		float: right;
 	}	
 
 /* Set properties for navbar-header 768 and up */
 	.navbar-header {
 		position: relative;
-		top: -45px;
+		top: 0;
 	}
 
 	.navbar-nav>li>a {
@@ -447,10 +479,28 @@ Media queries for responsive elements
 
 /* Main content 768 up */
 	.front .region-content {
-		/*max-width: 60%;*/
-		/*float: left;*/
-		padding-left: 10px;
+		width: 100%;
+		padding: 20px 30px;
 	}	
+
+	#block-block-4 {
+		max-width: 30%;
+		float: left;
+		background: #CCCCCC;
+		margin-right: 2%;
+		padding: 15px;
+	}
+
+	#block-block-4 h2 {
+		font-size: 20px;
+		margin-top: 0;
+		color: #201808;
+	}
+
+	#block-system-main {
+		max-width: 65%;
+		float: right;
+	}
 
 }
 
@@ -461,7 +511,7 @@ Media queries for responsive elements
 
 /* Constrain page-header and region-content width */	
 	.page-header, .region-content {
-		max-width: 800px;
+		max-width: 980px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-left: 0;
