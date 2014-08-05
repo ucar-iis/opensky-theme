@@ -31,8 +31,8 @@ Misc global elements
 /* Logo */
 
 .logo img {
-        display: none; /* Don't display logo img on xs screens  */
-        max-width: 50px; /* Set logo image size */
+        /*display: none;*/ /* Don't display logo img on xs screens  */
+        max-width: 200px; /* Set logo image size  screens */
 }
 
 /* Search */
@@ -79,6 +79,8 @@ Navbar
 	max-width: 980px;
 	margin-right: auto;
 	margin-left: auto;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* Set navbar background-color  */
@@ -108,6 +110,10 @@ Navbar
 	/*padding-left: 0;
 	padding-right: 0;*/
 	padding-top: 7px;
+}
+
+.container > .navbar-header {
+	margin-left: 0; /* override default Bootstrap negative left margin */
 }
 
 /* Remove default padding on navbar-collapse */
@@ -185,11 +191,18 @@ Containers
  	max-width: 980px;
  	margin-left: auto;
 	margin-right: auto;
-	background-color: #121212;
-	color: #FFFFFF;
+	background-color: #FFFFFF; /* Highlighted Region background color */
+	color: #121212; /* Highlighted Region text color */
 	padding-right: 0;
 	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
   	border-radius: 0;
+}
+
+.highlighted.jumbotron .block-title {
+	color: #163B69; /* Highlighted Region Block Title color */
 }
 
 /* Force all divs contained within jumbortron, e.g. highlighted section, not to exceed 980 width */
@@ -215,6 +228,11 @@ Containers
 	min-height: 268px;
 }
 
+.content {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 /* Remove default negative left and right padding on rows */
 .row {
 	padding-left: 0;
@@ -235,11 +253,9 @@ Drupal Regions
 
 .region-sidebar-second section {
 	margin: 30px;
-}
-
-.region-content {
-	padding-left: 20px;
-	padding-right: 20px;
+}.region-content {
+	/* padding-left: 20px;
+	padding-right: 20px;*/
 }
 
 .secondary {
@@ -341,7 +357,7 @@ Media queries for responsive elements
 
 /* Set logo image size for 768px and up */        
 	.logo img {
-		max-width: 220px;
+		max-width: 100%;
 	}
 
 /* Search 768 up */
@@ -369,7 +385,7 @@ Media queries for responsive elements
 	.navbar.container {
 		width: 100%;
 		margin-top: 40px;
-		height: 82px;
+		height: 101px;
 	}
 	
 /* Set navbar-brand font-size for 768px and up */
@@ -382,8 +398,8 @@ Media queries for responsive elements
 	.navbar.container > .container .lead {
 		margin-top: -20px;
 		color: #ffffff;
-        width: 300px;
-        float: right;
+        	width: 300px;
+        	float: right;
 	}	
 
 /* Set properties for navbar-header 768 and up */
@@ -422,17 +438,18 @@ Media queries for responsive elements
 
 /* Home page specific 768 up */
 	.front .content {
-    	max-width: 800px;
-        margin-left: auto;
-	    margin-right: auto;
+    		max-width: 800px;
+        	margin-left: auto;
+	    	margin-right: auto;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
 /* Main content 768 up */
 	.front .region-content {
-		max-width: 60%;
-		float: left;
+		/*max-width: 60%;*/
+		/*float: left;*/
+		padding-left: 10px;
 	}	
 
 }
