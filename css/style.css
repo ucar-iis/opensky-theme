@@ -139,7 +139,7 @@ Navbar
 
 .navbar-nav>li>a {
 	padding-top: 8px;
-	padding-bottom: 10px;
+	padding-bottom: 3px;
 	margin-top: 0;
 }
 
@@ -150,6 +150,7 @@ Navbar
 .navbar-default .navbar-nav > li > a {
 	color: #FFFFFF;
 	text-transform: uppercase;
+	font-size: .9em;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -181,8 +182,7 @@ Tweaks to UCAR orgNav
 /* Fix bug in #loaderOrg */
 
 #orgNavV1 #loaderOrg {
-	width: 26px!important; /* This is the loaderOrg CSS hack */
-	/*display: none!important;*/
+	width: 1px!important; /* This is the loaderOrg CSS hack, magically makes orgNav fit on mobile screen */
 }
 
 #orgNavV1 div#emergencyOrg, div#peopleOrg, div#contactOrg, orgNavV1 div {
@@ -251,7 +251,7 @@ Containers
 	max-width: 980px;
 	padding-left: 0;
 	padding-right: 0;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 
 .page-header {
@@ -269,6 +269,7 @@ Containers
 	/*padding-left: 20px;*/
 	padding-right: 20px;
 	padding-left: 0;
+	min-height: 0;
 }
 
 /* Remove default negative left and right padding on rows */
@@ -374,19 +375,29 @@ Footer
 }
 
 #orgFooter p {
-	color: #666666;
+	color: #FFFFFF;
 	text-align: center;
 	font-size: 1.2em;
 }
 
 .footer #orgFooter a {
-	color: #D75911;
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 
 .footer #orgFooter a:hover {
-        color: #D75911;
+        color: #FFFFFF;
 	text-decoration: underline;
 }
+
+.footer.container {
+	width: 100%;
+	max-width: 980px;
+	background: #163569; /* dark royal blue color */
+	padding-top: 20px;
+}
+
+
 
 /******************************************
 
@@ -468,7 +479,7 @@ Media queries for responsive elements
 	.navbar.container {
 		width: 100%;
 		margin-top: 0;
-		height: 127px; /* set height for navbar-container */
+		height: 121px; /* set height for navbar-container */
 		padding-right: 0;
 	}
 	
