@@ -88,7 +88,9 @@
       <?php endif; ?>
       
       <?php if (!empty($site_slogan)): ?>
-      	<p class="lead"><?php print $site_slogan; ?></p>
+
+      	<p class="lead"><img src="/sites/default/themes/opensky_bootstrap/images/opensky_slogan.png" alt-"Research. Services. Resources."></p>      
+
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->

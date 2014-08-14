@@ -333,14 +333,14 @@ Home page specific
 }
 
 /* Featured Publication Block  */
-#block-block-4 {
+#block-block-3 {
         background: #EEECE1; /* weird light brownish color */
         max-width: 100%;
 	float: none;
 }
 
 /* Featured Publication Heading */
-#block-block-4 h2 {
+#block-block-3 h2 {
         font-size: 20px;
         margin-top: 20px;
         color: #163B69;
@@ -499,7 +499,7 @@ Media queries for responsive elements
 
 /* Positioning etc for lead tagline in main navbar for 768 and up */
 	.navbar.container > .container .lead {
-		margin-top: 40px;
+		margin-top: 19px;
 		margin-right: 30px;
 		color: #ffffff;
         	width: 300px;
@@ -565,7 +565,7 @@ Media queries for responsive elements
 	}
 
 /* Featured Publication Block  */
-	#block-block-4 {
+	#block-block-3 {
 		max-width: 30%;
 		float: left;
 		background: #EEECE1; /* weird light brownish color */
@@ -574,7 +574,7 @@ Media queries for responsive elements
 	}
 
 /* Featured Publication Heading */
-	#block-block-4 h2 {
+	#block-block-3 h2 {
 		font-size: 20px;
 		margin-top: 0;
 		color: #163B69;
