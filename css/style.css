@@ -63,6 +63,26 @@ Navbar
 
 *************/
 
+/* nav-wrap is an extra wrapper around navbar-nav to enable centering etc */
+
+.nav-wrap {
+	background: #025081;
+	height: 30px;
+	float: left;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* navbar-header-wrap is an extra wrapper around navbar-header to get it to behave responsively, specific to OpenSky theme implementation */
+
+.navbar-header-wrap {
+	max-width: 980px;
+	background: #163B69;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Remove bottom margin from navbar */
 .navbar {
 	margin-bottom: 0;
@@ -464,7 +484,10 @@ Media queries for responsive elements
 
 	.navbar-nav {
 		background: #025081; /* Set navbar-nav bg color */
-		width: 100%; /* Set navbar-nav width */
+		width: 980px; /* Set navbar-nav width */
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.navbar-nav li {
@@ -479,7 +502,7 @@ Media queries for responsive elements
 	.navbar.container {
 		width: 100%;
 		margin-top: 0;
-		height: 121px; /* set height for navbar-container */
+		height: 120px; /* set height for navbar-container */
 		padding-right: 0;
 	}
 	
@@ -499,15 +522,20 @@ Media queries for responsive elements
 
 /* Positioning etc for lead tagline in main navbar for 768 and up */
 	.navbar.container > .container .lead {
-		margin-top: 19px;
+		margin-top: 40px;
 		margin-right: 30px;
 		color: #ffffff;
-        	width: 300px;
+        	max-width: 300px;
 		float: right;
+	}
+
+	.lead img {
+		max-width: 300px;
 	}	
 
 /* Set properties for navbar-header 768 and up */
 	.navbar-header {
+		width: 100%;
 		max-width: 980px;
 		padding-top: 0;
 		margin-left: auto;
@@ -591,8 +619,8 @@ Media queries for responsive elements
 
 /* Tablet Landscape and Medium Large desktop screens */
 
-/* For screens 980px and up */
-@media all and (min-width:980px) {
+/* For screens 980px and up */ /* Reduced to 957px to accomodate responsive navbar */
+@media all and (min-width:957px) {
 
 /* Constrain page-header and region-content width */	
 	.page-header, .region-content {
@@ -607,7 +635,31 @@ Media queries for responsive elements
 		margin-left: 30px;
 	}
 
-	.container > .navbar-header {
+/* Set container size for 957px and up */
+        .navbar.container {
+                height: 125px; /* set height for navbar-container */
+        }
+
+	.navbar-nav li.first {
+                padding-left: 0; /* Remove left padding on this element, which was introduced in 768-up rules above */
+        }
+
+/* Set navbar-header width for 957 up */
+
+	.navbar-nav {
+		width: 980px;
+		max-width: 980px;
 	}
 
+/* Positioning etc for lead tagline in main navbar for 957 and up */
+
+	.navbar.container > .container .lead {
+		margin-top: 24px;
+		float: left; /* hack to control .lead img position */
+		margin-left: 100px; /* further hack on .lead img positioning */
+	}
+	
+	.lead img {
+                max-width: 524px;
+        }
 }
