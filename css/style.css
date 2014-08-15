@@ -384,6 +384,52 @@ Home page specific
 	padding-top: 20px;
 }
 
+/* Islandora specific, i.e. pages with Islandora content */
+
+/* .islandora class is on a div which wraps all Islandora content */
+.islandora{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.islandora-basic-image-metadata {
+        padding-right: 30px;
+        padding-left: 30px;
+}
+
+.islandora-metadata {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.islandora-basic-image-content {
+	background: none;
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.islandora-object-fields dt {
+	background: #163B69;
+	color: #FFFFFF;
+	height: 100%;
+	padding-top: 10px;
+	padding-right: 2%;
+	margin-bottom: -100px;
+	padding-bottom: 110px;
+	overflow: hidden;
+}
+
+.islandora-object-fields dd {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+dl.islandora-metadata-fields {
+	overflow: hidden;
+}
+
+
 /**************
 
 Footer 
