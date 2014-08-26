@@ -1,14 +1,16 @@
-/********************************
+/***************************************
 /*
 /* CSS for OpenSky Bootstrap sub-theme
 /*
 /* author struex at ucar dot edu
 /*
-******************************* */
+***************************************/
 
 /* Add background image to body */
 body {
 	background: url('../images/bg.jpg') repeat-x #E3E4E6;
+	padding-top: 0!important; /* This overrides a naughty rule being inherited from Atmos theme, I think, which was causing the global nav jump bug */
+	margin-top: 20px; /* set top margin for body */
 }
 
 /*********************
@@ -48,6 +50,31 @@ h1.page-header {
 	margin-top: 40px;
 	font-size: 1.7em;
     /*text-transform: uppercase;*/
+}
+
+/* Headings */
+
+h1, h2 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+/* FAQ Page */
+
+/* node-7 is the FAQ Page on the test server */ /* This selector should be changed to something that won't change, i.e. the node #, depending on installation */
+
+/* FAQ Page Header */
+#node-7 h2 {
+	color: #910F0F;
+}
+
+/* FAQ Page lists */
+#node-7 .content ol li, #node-7 .content ul li {
+	padding: 0;
+	margin: 0;
 }
 
 /* Lead Text */
@@ -198,6 +225,11 @@ Navbar
 Tweaks to UCAR orgNav 
 
 *******************************/
+
+#orgNavV1 {
+	position: relative;
+	top: 0;
+}
 
 /* Fix bug in #loaderOrg */
 
