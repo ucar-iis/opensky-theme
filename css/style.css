@@ -418,6 +418,39 @@ Home page specific
 
 /* Islandora specific, i.e. pages with Islandora content */
 
+/* Islandora Bookmarks */
+
+#islandora-bookmark {
+	max-width: 40%;
+	float: right;
+	margin: 0 20px;
+}
+
+/* Islandora Display Switch */
+
+.islandora-basic-collection-display-switch {
+	margin: 0 20px;
+}
+
+.islandora-basic-collection-display-switch ul {
+	list-style-type: none;
+}
+
+.islandora-basic-collection-display-switch ul li {
+	float: left;
+}
+
+.islandora-basic-collection-display-switch ul li a::after {
+	content: "|";
+	padding: 0 7px;
+}
+
+/* Islandora Collection Pages */
+
+.page-islandora .navbar-default .navbar-nav > li:nth-child(4) > a {
+	background-color: #0075BF;
+}
+
 /* .islandora class is on a div which wraps all Islandora content */
 .islandora{
 	padding-right: 30px;
