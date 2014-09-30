@@ -494,6 +494,20 @@ dl.islandora-metadata-fields {
 	overflow: hidden;
 }
 
+/* Islandora Browse page */
+
+/* Islandora Advanced Search */
+
+.jumbotron div #islandora-solr-advanced-terms {
+	width: 90%;
+	float: left;
+}
+
+.jumbotron div .islandora-solr-advanced-controls {
+	width: 10%;
+	float: left;
+}
+
 
 /**************
 
