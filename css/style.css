@@ -418,6 +418,77 @@ Home page specific
 
 /* Islandora specific, i.e. pages with Islandora content */
 
+/* Islandora Search Results */
+
+.page-islandora-search .page-header {
+	width: 70%;
+	float: right;
+	background: #163B69;
+        color: #FFFFFF;
+        padding: 5px 10px;
+	margin-right: 20px;
+	margin-top: 30px;
+	font-size: 1.3em;
+}
+
+dl.solr-fields {
+	border-top: none;
+}
+
+#block-islandora-solr-basic-facets {
+	max-width: 20%;
+	float: left;
+	margin: 10px;
+}
+
+#block-islandora-solr-basic-facets h2 {
+	background: #163B69;
+	color: #FFFFFF;
+	padding: 5px 10px;
+	font-size: 1.3em;
+}
+
+.islandora-solr-facet li {
+	list-style-type: none;
+}
+
+.islandora-solr-search-results {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#islandora-solr-top {
+	max-width: 75%;
+	float: right;
+	margin-right: 20px;
+}
+
+#secondary-display-profiles {
+	list-style-type: none;
+	width: 700px;
+}
+
+#secondary-display-profiles li {
+	float: right;
+}
+
+.secondary-display-csv {
+	width: 20px;
+}
+
+#islandora-solr-result-count {
+	margin: 20px;
+}
+
+.islandora-solr-content {
+	max-width: 75%;
+	float: right;
+}
+
+.islandora-solr-facet-wrapper h3 {
+	font-size: 1em;
+}
+
 /* Islandora Bookmarks */
 
 #islandora-bookmark {
