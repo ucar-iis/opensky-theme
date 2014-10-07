@@ -491,6 +491,14 @@ dl.solr-fields {
 	font-size: 1em;
 }
 
+/* Islandora Advanced Search */
+
+/* Don't display plus/minus buttons in Advanced Search */
+#islandora-solr-advanced-terms div button {
+	display: none;
+}
+
+
 /* Islandora Bookmarks */
 
 #islandora-bookmark {
@@ -547,26 +555,6 @@ dl.solr-fields {
 	padding-right: 0;
 }
 
-.islandora-object-fields dt {
-	background: #163B69;
-	color: #FFFFFF;
-	height: 100%;
-	padding-top: 10px;
-	padding-right: 2%;
-	margin-bottom: -100px;
-	padding-bottom: 110px;
-	overflow: hidden;
-}
-
-.islandora-object-fields dd {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-dl.islandora-metadata-fields {
-	overflow: hidden;
-}
-
 /* Islandora Browse page */
 
 /* Islandora Advanced Search */
@@ -581,6 +569,55 @@ dl.islandora-metadata-fields {
 	float: left;
 }
 
+/* Islandora Object pages */
+
+/* Force Metadata Details on Object pages to be open by default */
+html.js fieldset.collapsed {
+        height: auto;
+}
+
+html.js fieldset.collapsed .fieldset-wrapper {
+        display: block;
+}
+
+.fieldset-wrapper dt {
+	background: #163B69;
+	color: #FFFFFF;
+}
+
+.islandora-pdf-metadata dt {
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.islandora-pdf-metadata dd {
+	padding-left: 20px;
+}
+
+.islandora-object-fields dt {
+        background: #163B69;
+        color: #FFFFFF;
+        height: 100%;
+        padding-top: 10px;
+        padding-right: 2%;
+        margin-bottom: -100px;
+        padding-bottom: 110px;
+        overflow: hidden;
+}
+
+.islandora-object-fields dd {
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+
+dl.islandora-metadata-fields {
+        overflow: hidden;
+}
+
+.badge {
+	background-color: #163B69;
+}
 
 /**************
 
