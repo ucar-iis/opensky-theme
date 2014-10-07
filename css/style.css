@@ -395,7 +395,9 @@ Home page specific
 #block-block-3 h2 {
         font-size: 20px;
         margin-top: 20px;
-        color: #163B69;
+        color: #FFFFFF;
+	background: #163B69;
+	padding: 7px 10px;
 }
 
 /* Front Page Main Block */
@@ -794,15 +796,21 @@ Media queries for responsive elements
 		float: left;
 		background: #EEECE1; /* weird light brownish color */
 		margin-right: 2%;
-		padding: 15px;
+		/*padding: 15px;*/
 	}
 
 /* Featured Publication Heading */
 	#block-block-3 h2 {
-		font-size: 20px;
+		font-size: 18px;
 		margin-top: 0;
-		color: #163B69;
+		/*color: #163B69;*/
 	}
+
+/* Featured Pub paragraph */
+
+#block-block-3 p {
+	padding: 5px 10px;
+}
 
 /* Front Page Main Block */
 
