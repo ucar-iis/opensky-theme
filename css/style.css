@@ -849,13 +849,6 @@ Media queries for responsive elements
 	padding: 5px 10px;
 }
 
-/* Front Page Main Block */
-
-	#block-system-main {
-		max-width: 65%;
-		float: right;
-	}
-
 }
 
 /* Tablet Landscape and Medium Large desktop screens */
