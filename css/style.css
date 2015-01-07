@@ -401,7 +401,7 @@ Home page specific
 }
 
 /* Front Page Main Block */
-#block-system-main {
+.front #block-system-main {
 	float: none;
 }
 
