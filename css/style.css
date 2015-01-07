@@ -797,14 +797,6 @@ Media queries for responsive elements
 
 /* Blocks */
 
-/* Who We Are block 768 up */
-
-	#block-block-13, #block-block-13 .block-title {
-		margin-top: 0;
-		margin-right: 0;
-		margin-left: 0;
-	}
-
 /* Home page specific 768 up */
 	.front .content {
     		max-width: 800px;
